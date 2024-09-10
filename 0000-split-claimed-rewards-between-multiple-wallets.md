@@ -9,11 +9,11 @@
 
 ## Summary
 
-This Helium Improvement Proposal introduces the concept of splitting claimed rewards between multiple wallets. 
+This Helium Improvement Proposal introduces the concept of splitting claimed rewards between multiple wallets by creating DEPUTY rewardable NFTs that each wallet can hold. 
 
 ## Motivation
 
-Most commercial venues want a share of the rewards, but do not possess the technical knowledge or will to deploy hardware themselves. To grow coverage of the mobile network faster, it makes sense to provide Builders a way to share rewards with Property owners. This would enable both parties to be rewarded in separate wallets at a specified percentage. Example: When claiming, Builder receives 50% and Property Owner recieves 50%. This will also reduce the gas fees paid by users who required 2 separate transactions to acheive this result manually. 
+Most commercial venues and hosts want a share of the rewards, but do not possess the technical knowledge or will to deploy hardware themselves. To grow coverage of the Helium subnetworks (mobile network) more efficiently, it makes sense to provide Builders a way to share rewards with (Property owners) hosts or other interested parties without acting as a financial advisor or fiduciary. This would enable (both) multiple parties to be rewarded in separate wallets at an agreed upon (specified) percentage. Example: When (claiming,) rewards are distributed the Builder's wallet (receives) 50% for their DEPUTY NFT and Property Owner's wallet recieves 50% for their DEPUTY NFT, assuming they Builder and the Property Owner have an off chain agreement in place that spells out the 50/50 share. (This will also reduce the gas fees paid by users who required 2 separate transactions to acheive this result manually.) This will cleanly direct rewards to each party for tracking and accounting purposes. It will no lomger be required that one entity claim, track and distribute rewards for someone else. 
 
 ## Stakeholders
 
@@ -21,18 +21,24 @@ Most commercial venues want a share of the rewards, but do not possess the techn
 - Operators who manage existing hotspots 
 - Property Owners hosting hotspots
 - Prospective Property Owners seeking a portion of rewards post-deployment
+- All future subnetworks
 
 ## Detailed Explanation
 
-In this proposal we formally introduce the concept of splitting rewards between multiple wallets. Upon approval of this HIP, hotspots would configurable to allow Builders to specify additional wallets to receive rewards and what percentage of the rewards each wallet would recieve when claiming. Example: a commercial Property Owner could allow a Builder to deploy hotspots throughout their property in exchange for 50% of the ongoing rewards. Upon claiming the rewards, the Builder and the Property Owner would each receive 50% of the claimed rewards in their respective wallets. 
+In this proposal we formally introduce the concept of splitting rewards between multiple wallets by creating DEPUTY NFTs. Upon approval of this HIP, hotspots would configurable to allow Deployers to specify additional DEPUTY NFTs to receive rewards and choose what percentage of the rewards each DEPUTY NFT (wallet) would recieve when rewards are calculated (claiming). Example: a commercial Property Owner could allow a Builder to deploy hotspots throughout their property in exchange for 50% of the ongoing rewards. Upon (claiming) calculating the rewards, the Builder and the Property Owner would each receive 50% of the calculated (claimed) rewards in their respective wallets. 
+
+The DEPUTY NFT reward split is deteremined by the parties invloved in an off-chain agreement. Both parties through their wallets will be required to approve establishing the rewards each DEPUTY NFT is entitled to, and both wallets will be required to sign off on any changes to the rewards split. 
 
 ## Drawbacks
 
-Introducing rewards splits would enable the party in custody of the hotspot's NFT to change the split percentage at any time without approval from the other party.
+(Introducing rewards splits would enable the party in custody of the hotspot's NFT to change the split percentage at any time without approval from the other party.) 
+- Splitting one hotspot rewards into multiple rewardable DEPUTY NFTs will increase the potential for one party to loose control of their wallet and temporarily or permanently reduce the rewards available to that hotspot.
+- Hosts may be more inclined to immeadiately exchange their rewards for fiat and negatively impact stakers and holders of veMOBILE and veIOT.
+- 
 
 ## Rationale and Alternatives
 
-The current approach to splitting rewards is a time-consuming process in which  the party custodying the hotspot's NFT to claim the rewards and then send the other party their portion of the rewards manually in a separate transaction.
+The current approach to splitting rewards is a time-consuming process in which the party custodying the hotspot's NFT to claim the rewards and then send the other party their portion of the rewards manually in a separate transaction. The party custodying the single NFT is responsible for financial accounting and rewards transfer record keeping. 
 
 ## Unresolved Questions
 
@@ -44,4 +50,4 @@ Nova Labs will collaborate with the Helium Foundation to complete the implementa
 
 ## Success Metrics
 
-This HIP has been deployed successfully when rewards are sent to multiple wallets in accordance with the defined split percentage and listed addresses upon claiming. Success can be measured by comparing the gas fees paid by users who were manually splitting rewards prior to the implementation of this HIP.
+This HIP has been deployed successfully when rewards are sent to multiple wallets in accordance with the defined split percentage and listed addresses upon daily reward calculations (claiming). Success can be measured by comparing the gas fees paid by users who were manually splitting rewards prior to the implementation of this HIP.
